@@ -24,6 +24,15 @@ if (flutterVersionName == null) {
 }
 
 android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.example.myapp"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+        // ... other configurations
+    }
     namespace 'com.example.to_do'
     compileSdkVersion flutter.compileSdkVersion.toInteger()
     ndkVersion flutter.ndkVersion
@@ -62,4 +71,6 @@ flutter {
 
 dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+    implementation platform('com.google.firebase:firebase-bom:28.4.1')
+    implementation 'com.google.firebase:firebase-analytics'
 }
